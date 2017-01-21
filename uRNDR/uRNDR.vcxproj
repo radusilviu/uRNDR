@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|VisualGDB">
+      <Configuration>Debug</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|VisualGDB">
+      <Configuration>Release</Configuration>
+      <Platform>VisualGDB</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6901BC3-5C22-4ABF-82A3-A6F330D307B8}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <MCUPropertyListFile>$(ProjectDir)stm32.props</MCUPropertyListFile>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <GNUConfigurationType>Debug</GNUConfigurationType>
+    <Toolchain>C:\SysGCC\arm-eabi</Toolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <Toolchain>C:\SysGCC\arm-eabi</Toolchain>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>free_rtos;hal;startup;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript>STM32F429ZI_flash.lds</LinkerScript>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>free_rtos;hal;startup;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG=1;RELEASE=1;%(ClCompile.PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLinkerInputs>;%(Link.AdditionalLinkerInputs)</AdditionalLinkerInputs>
+      <LibrarySearchDirectories>;%(Link.LibrarySearchDirectories)</LibrarySearchDirectories>
+      <AdditionalLibraryNames>;%(Link.AdditionalLibraryNames)</AdditionalLibraryNames>
+      <LinkerScript>STM32F429ZI_flash.lds</LinkerScript>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="free_rtos\cmsis_os.c" />
+    <ClCompile Include="free_rtos\croutine.c" />
+    <ClCompile Include="free_rtos\event_groups.c" />
+    <ClCompile Include="free_rtos\heap_4.c" />
+    <ClCompile Include="free_rtos\list.c" />
+    <ClCompile Include="free_rtos\port.c" />
+    <ClCompile Include="free_rtos\queue.c" />
+    <ClCompile Include="free_rtos\tasks.c" />
+    <ClCompile Include="free_rtos\timers.c" />
+    <ClCompile Include="startup\main.c" />
+    <ClCompile Include="startup\startup_stm32f429xx.c" />
+    <ClCompile Include="startup\system_stm32f4xx.c" />
+    <ClCompile Include="template\template.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_adc.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_adc_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_can.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_cec.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_cortex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_crc.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_cryp.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_cryp_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dac.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dac_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dcmi.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dcmi_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dfsdm.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dma.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dma2d.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dma_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_dsi.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_eth.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_flash.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_flash_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_flash_ramfunc.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_fmpi2c.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_fmpi2c_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_gpio.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_hash.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_hash_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_hcd.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_i2c.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_i2c_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_i2s.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_i2s_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_irda.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_iwdg.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_lptim.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_ltdc.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_ltdc_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_nand.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_nor.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_pccard.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_pcd.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_pcd_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_pwr.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_pwr_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_qspi.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_rcc.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_rcc_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_rng.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_rtc.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_rtc_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_sai.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_sai_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_sd.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_sdram.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_smartcard.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_spdifrx.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_spi.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_sram.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_tim.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_tim_ex.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_uart.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_usart.c" />
+    <ClCompile Include="hal\stm32f4xx_hal_wwdg.c" />
+    <ClCompile Include="hal\stm32f4xx_ll_fmc.c" />
+    <ClCompile Include="hal\stm32f4xx_ll_fsmc.c" />
+    <ClCompile Include="hal\stm32f4xx_ll_sdmmc.c" />
+    <ClCompile Include="hal\stm32f4xx_ll_usb.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="free_rtos\cmsis_os.h" />
+    <ClInclude Include="free_rtos\croutine.h" />
+    <ClInclude Include="free_rtos\deprecated_definitions.h" />
+    <ClInclude Include="free_rtos\event_groups.h" />
+    <ClInclude Include="free_rtos\FreeRTOS.h" />
+    <ClInclude Include="free_rtos\list.h" />
+    <ClInclude Include="free_rtos\mpu_wrappers.h" />
+    <ClInclude Include="free_rtos\portable.h" />
+    <ClInclude Include="free_rtos\portmacro.h" />
+    <ClInclude Include="free_rtos\projdefs.h" />
+    <ClInclude Include="free_rtos\queue.h" />
+    <ClInclude Include="free_rtos\semphr.h" />
+    <ClInclude Include="free_rtos\StackMacros.h" />
+    <ClInclude Include="free_rtos\task.h" />
+    <ClInclude Include="free_rtos\timers.h" />
+    <ClInclude Include="hal\stm32f429xx.h" />
+    <ClInclude Include="startup\FreeRTOSConfig.h" />
+    <ClInclude Include="startup\stm32f4xx_hal_conf.h" />
+    <ClInclude Include="template\template.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|VisualGDB'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|VisualGDB'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="hal\arm_common_tables.h" />
+    <ClInclude Include="hal\arm_const_structs.h" />
+    <ClInclude Include="hal\arm_math.h" />
+    <ClInclude Include="hal\cmsis_armcc.h" />
+    <ClInclude Include="hal\cmsis_armcc_V6.h" />
+    <ClInclude Include="hal\cmsis_gcc.h" />
+    <ClInclude Include="hal\core_cm0.h" />
+    <ClInclude Include="hal\core_cm0plus.h" />
+    <ClInclude Include="hal\core_cm3.h" />
+    <ClInclude Include="hal\core_cm4.h" />
+    <ClInclude Include="hal\core_cm7.h" />
+    <ClInclude Include="hal\core_cmFunc.h" />
+    <ClInclude Include="hal\core_cmInstr.h" />
+    <ClInclude Include="hal\core_cmSimd.h" />
+    <ClInclude Include="hal\core_sc000.h" />
+    <ClInclude Include="hal\core_sc300.h" />
+    <ClInclude Include="hal\stm32f4xx.h" />
+    <ClInclude Include="hal\stm32f4xx_hal.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_adc.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_adc_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_can.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_cec.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_cortex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_crc.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_cryp.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_cryp_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dac.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dac_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dcmi.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dcmi_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_def.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dfsdm.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dma.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dma2d.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dma_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_dsi.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_eth.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_flash.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_flash_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_flash_ramfunc.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_fmpi2c.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_fmpi2c_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_gpio.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_gpio_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_hash.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_hash_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_hcd.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_i2c.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_i2c_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_i2s.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_i2s_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_irda.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_iwdg.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_lptim.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_ltdc.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_ltdc_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_nand.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_nor.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_pccard.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_pcd.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_pcd_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_pwr.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_pwr_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_qspi.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_rcc.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_rcc_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_rng.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_rtc.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_rtc_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_sai.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_sai_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_sd.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_sdram.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_smartcard.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_spdifrx.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_spi.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_sram.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_tim.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_tim_ex.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_uart.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_usart.h" />
+    <ClInclude Include="hal\stm32f4xx_hal_wwdg.h" />
+    <ClInclude Include="hal\stm32f4xx_ll_fmc.h" />
+    <ClInclude Include="hal\stm32f4xx_ll_fsmc.h" />
+    <ClInclude Include="hal\stm32f4xx_ll_sdmmc.h" />
+    <ClInclude Include="hal\stm32f4xx_ll_usb.h" />
+    <ClInclude Include="hal\stm32_hal_legacy.h" />
+    <ClInclude Include="hal\system_stm32f4xx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="uRNDR-Debug.vgdbsettings" />
+    <None Include="uRNDR-Release.vgdbsettings" />
+    <None Include="stm32.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="stm32.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <LinkerScript Include="STM32F429ZI_flash.lds" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

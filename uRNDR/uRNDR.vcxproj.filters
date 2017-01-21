@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="VisualGDB settings">
+      <UniqueIdentifier>{03bb2d9e-f249-441b-8ec7-c12369fbd0a0}</UniqueIdentifier>
+      <Extensions>*.vgdbsettings</Extensions>
+    </Filter>
+    <Filter Include="components">
+      <UniqueIdentifier>{bbf158c4-49c5-40ac-a1db-806da8671e95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\free_rtos">
+      <UniqueIdentifier>{76853ea5-827a-4428-9d24-5f28e886e05a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\hal">
+      <UniqueIdentifier>{ee6593d8-ff35-417a-8ebe-c3319c829933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\startup">
+      <UniqueIdentifier>{1a03ee5e-82c3-4017-b7c0-677a4115e62a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\template">
+      <UniqueIdentifier>{238a325c-91a1-4aed-b867-2331211bb6f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="components\linker">
+      <UniqueIdentifier>{f8ec67ed-7999-4a25-b914-61ba61e14cde}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="template\template.cpp">
+      <Filter>components\template</Filter>
+    </ClCompile>
+    <ClCompile Include="startup\system_stm32f4xx.c">
+      <Filter>components\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="startup\startup_stm32f429xx.c">
+      <Filter>components\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\cmsis_os.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\croutine.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\event_groups.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\heap_4.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\list.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\port.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\queue.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\tasks.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="free_rtos\timers.c">
+      <Filter>components\free_rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_adc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_adc_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_can.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_cec.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_cortex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_crc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_cryp.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_cryp_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dac.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dac_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dcmi.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dcmi_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dfsdm.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dma.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dma2d.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dma_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_dsi.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_eth.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_flash.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_flash_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_flash_ramfunc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_fmpi2c.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_fmpi2c_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_gpio.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_hash.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_hash_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_hcd.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_i2c.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_i2c_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_i2s.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_i2s_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_irda.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_iwdg.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_lptim.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_ltdc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_ltdc_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_nand.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_nor.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_pccard.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_pcd.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_pcd_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_pwr.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_pwr_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_qspi.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_rcc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_rcc_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_rng.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_rtc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_rtc_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_sai.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_sai_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_sd.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_sdram.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_smartcard.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_spdifrx.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_spi.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_sram.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_tim.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_tim_ex.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_uart.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_usart.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_hal_wwdg.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_ll_fmc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_ll_fsmc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_ll_sdmmc.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="hal\stm32f4xx_ll_usb.c">
+      <Filter>components\hal</Filter>
+    </ClCompile>
+    <ClCompile Include="startup\main.c">
+      <Filter>components\startup</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="template\template.h">
+      <Filter>components\template</Filter>
+    </ClInclude>
+    <ClInclude Include="startup\FreeRTOSConfig.h">
+      <Filter>components\startup</Filter>
+    </ClInclude>
+    <ClInclude Include="startup\stm32f4xx_hal_conf.h">
+      <Filter>components\startup</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\cmsis_os.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\croutine.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\deprecated_definitions.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\event_groups.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\FreeRTOS.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\list.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\mpu_wrappers.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\portable.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\portmacro.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\projdefs.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\queue.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\semphr.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\StackMacros.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\task.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="free_rtos\timers.h">
+      <Filter>components\free_rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\arm_common_tables.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\arm_const_structs.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\arm_math.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\cmsis_armcc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\cmsis_armcc_V6.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\cmsis_gcc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cm0.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cm0plus.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cm3.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cm4.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cm7.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cmFunc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cmInstr.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_cmSimd.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_sc000.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\core_sc300.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_adc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_adc_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_can.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_cec.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_cortex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_crc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_cryp.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_cryp_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dac.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dac_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dcmi.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dcmi_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_def.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dfsdm.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dma.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dma2d.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dma_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_dsi.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_eth.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_flash.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_flash_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_flash_ramfunc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_fmpi2c.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_fmpi2c_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_gpio.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_gpio_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_hash.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_hash_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_hcd.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_i2c.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_i2c_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_i2s.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_i2s_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_irda.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_iwdg.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_lptim.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_ltdc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_ltdc_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_nand.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_nor.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_pccard.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_pcd.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_pcd_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_pwr.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_pwr_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_qspi.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_rcc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_rcc_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_rng.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_rtc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_rtc_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_sai.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_sai_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_sd.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_sdram.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_smartcard.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_spdifrx.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_spi.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_sram.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_tim.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_tim_ex.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_uart.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_usart.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_hal_wwdg.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_ll_fmc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_ll_fsmc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_ll_sdmmc.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f4xx_ll_usb.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32_hal_legacy.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\system_stm32f4xx.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="hal\stm32f429xx.h">
+      <Filter>components\hal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="uRNDR-Debug.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="uRNDR-Release.vgdbsettings">
+      <Filter>VisualGDB settings</Filter>
+    </None>
+    <None Include="stm32.props">
+      <Filter>components\startup</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="stm32.xml">
+      <Filter>VisualGDB settings</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <LinkerScript Include="STM32F429ZI_flash.lds">
+      <Filter>components\linker</Filter>
+    </LinkerScript>
+  </ItemGroup>
+</Project>
